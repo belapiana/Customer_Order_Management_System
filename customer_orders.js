@@ -7,3 +7,11 @@ const inventory = [
     { name: 'Cookies', price: 6, quantity: 211 },
 ];
 
+// Tak 2: Create an Orders Array of Order Objects
+
+const orders = [ {
+    customerName: '', 
+    items: [], 
+    status: 'pending'}
+];
+

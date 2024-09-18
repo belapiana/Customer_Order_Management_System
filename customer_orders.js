@@ -9,9 +9,19 @@ const inventory = [
 
 // Tak 2: Create an Orders Array of Order Objects
 
-const orders = [ {
-    customerName: '', 
-    items: [], 
-    status: 'pending'}
-];
+const orders = [];
+orders.push({
+    customerName: customerName,
+    items: items,
+    status: 'Pending'  
+  });
 
+// Task 3: Create a Function to Place an Order
+
+function placeOrder (orderItems) {
+    const inventoryItem = inventory.find(element => element.name === orderItems);
+    console.log(`Error: Product '${orderItems}' not found in inventory.`);
+
+};
+
+placeOrder("Lolipop");

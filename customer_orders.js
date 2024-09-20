@@ -11,17 +11,23 @@ const inventory = [
 
 const orders = [];
 orders.push({
-    customerName: customerName,
-    items: items,
+    customerName: "Isabela",
+    orderedItems: ["Chocolate", "Candy"] ,
     status: 'Pending'  
   });
 
 // Task 3: Create a Function to Place an Order
 
-function placeOrder (orderItems) {
-    const inventoryItem = inventory.find(element => element.name === orderItems);
-    console.log(`Error: Product '${orderItems}' not found in inventory.`);
+function placeOrder (customerName, orderedItems) {
+    for (let item of orderedItems) {
+    const inventoryItem = inventory.find(element => element.name === item);
+   
+    if (inventoryItem === undefined) {
+    console.log(`Error: Product '${item}' not found in inventory.`)};
+    
+    else if { inventoryItem.quantity -
 
+    }}
 };
 
 placeOrder("Lolipop");

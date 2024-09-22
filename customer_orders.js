@@ -36,4 +36,20 @@ function placeOrder (customerName, orderedItems) {
         items: orderedItems,
         status: 'Pending',
     });
+};
 
+// Task 4: Create a Function to Calculate Total for an Order
+
+function calculateOrderTotal(order) {
+    let total = 0;
+
+    for (let item of order.items) {
+        const inventoryItem = inventory.find(element => element.name === item.name);
+        
+ if (inventoryItem) {
+            total += inventoryItem.price * item.quantity; 
+ } else {
+            console.log(`Warning: Product '${item.name}' not found in inventory.`);
+        }
+    }
+    return total };

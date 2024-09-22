@@ -53,3 +53,19 @@ function calculateOrderTotal(order) {
         }
     }
     return total };
+
+    // Task 5: 
+
+ function completeOrder(customerName) {
+       
+ const order = orders.find(a => a.customerName === customerName);
+
+    if (order) {
+            order.status = 'Completed'; 
+            console.log(`Order for ${customerName} was completed.`);
+    } else {
+            console.log(`Error: order for '${customerName}' not found.`);
+        }
+    }; 
+
+    

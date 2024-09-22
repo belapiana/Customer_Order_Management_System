@@ -54,7 +54,7 @@ function calculateOrderTotal(order) {
     }
     return total };
 
-    // Task 5: 
+    // Task 5: Create a Function to Mark an Order as Completed
 
  function completeOrder(customerName) {
        
@@ -68,4 +68,26 @@ function calculateOrderTotal(order) {
         }
     }; 
 
-    
+   // Task 6: Create a Function to Check Pending Orders
+
+ function checkPendingOrders() {
+let hasPendingOrders = false; 
+
+for (let order of orders) {
+if (order.status === 'Pending') {
+hasPendingOrders = true; 
+    console.log(`Customer: ${order.customerName}`);
+console.log('Items:');
+            
+for (let item of order.items) {
+     console.log(`  - ${item.name}: ${item.quantity}`);
+            }
+     console.log(`Status: ${order.status}`);
+     console.log('---'); 
+        }
+    }
+
+    if (hasPendingOrders === undefined) {
+        console.log('No pending orders found.');
+    }
+};
